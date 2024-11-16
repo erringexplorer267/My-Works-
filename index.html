@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add custom styles for the header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white; 
+        }
+
+        .logo span {
+            color: red;
+        }
+        .search-container {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: 2px solid #333; /* Change border color to dark */
+            background-color: #333;
+            color: #e5e5e5;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: #b3b3b3;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #e50914;
+        }
+
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #1f1f1f;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 10;
+        }
+
+        .suggestions a {
+            color: white; /* Make suggestion text white */
+            padding: 1rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        .suggestions a:hover {
+            background-color: #333;
+        }
+
+        .search-container.active .suggestions {
+            display: block;
+        }
+
+        /* Navigation styles */
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e5e5e5;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            color: #e50914;
+        }
+
+        .subscribe-btn {
+            background-color: #e50914;
+            padding: 10px 20px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #f40612;
+        }
+
+        /* Country selection button styles */
+        .country-selection {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .country-btn {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #333;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .country-btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .country-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo"><span class="netflix-style">Netflix</span> Clone</div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search Movies or Series..." id="searchInput">
+            <span class="search-icon">&#128269;</span> <!-- Search icon (Magnifying Glass) -->
+            <div class="suggestions" id="suggestions">
+                <a href="#">3 IDIOTS</a>
+                <a href="#">MONEY HEIST</a>
+                <a href="#">DarK</a>
+                <a href="#">Stranger Things</a>
+                <a href="#">The Witcher</a>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="login.html" target="_blank">Login</a></li>
+
+                <li><a href="subscribe.html" target="_main" class="subscribe-btn">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Unlimited movies, TV shows, and more.</h2>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <br>
+            <a href="subscribe.html" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Country Selection Buttons (Above Movies Section) -->
+    <div class="country-selection">
+        <P>Choose: </P>
+        <button class="country-btn">India</button>
+        <button class="country-btn">USA</button>
+        <button class="country-btn">UK</button>
+        <button class="country-btn">Canada</button>
+    </div>
+
+    <!-- Movies Section -->
+    <section id="movies" class="content-section">
+        <div class="container">
+            <h2>Trending Now</h2>
+            <div class="grid">
+                <!-- Movie 1 -->
+                <div class="card">
+                    <img src="/Netflix Clone/icon 3id.jpg" height="300" alt="Movie 1">
+                    <h3><a href="https://youtu.be/aZzyaY9gR7s?si=OIngrsOiYaQWqkSc" target="_main">3 IDIOTS</a></h3>
+                </div>
+                <!-- Movie 2 -->
+                <div class="card">
+                    <img src="/Netflix Clone/oporajito.jpg" height="300" width="300" alt="Movie 2">
+                    <h3><a href="https://youtu.be/_UzaIsnn8hM?si=7RdZgkKLOfrR4uzC" target="_main">অপরাজিত</a></h3>
+                </div>
+                <!-- Movie 3 -->
+                <div class="card">
+                    <img src="/Netflix Clone/icon 3id.jpg" height="300" alt="Movie 3">
+                    <h3><a href="https://youtu.be/aZzyaY9gR7s?si=OIngrsOiYaQWqkSc" target="_main">3 IDIOTS</a></h3>
+                </div>
+                <!-- Movie 4 -->
+                <div class="card">
+                    <img src="/Netflix Clone/oporajito.jpg" height="300" width="300" alt="Movie 4">
+                    <h3><a href="https://youtu.be/_UzaIsnn8hM?si=7RdZgkKLOfrR4uzC" target="_main">অপরাজিত</a></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Series Section -->
+<section id="series" class="content-section">
+    <div class="container">
+        <h2>Popular Series</h2>
+        <div class="grid">
+            <!-- Series 1 -->
+            <div class="card">
+                <img src="/Netflix Clone/MH.jpg" height="250" width="400" alt="Series 1">
+                <h3><a href="https://www.netflix.com/in/title/80192098" target="_main">MONEY HEIST</a></h3>
+            </div>
+            <!-- Series 2 -->
+            <div class="card">
+                <img src="/Netflix Clone/dark.jpg" height="250" width="400" height="500" alt="Series 2">
+                <h3><a href="https://www.netflix.com/in/title/80100172" target="_main">Dark</a></h3>
+            </div>
+            <!-- Series 3 -->
+            <div class="card">
+                <img src="/Netflix Clone/Stranger_Things_logo.png" height="250" width="400" alt="Series 3">
+                <h3><a href="https://www.netflix.com/in/title/80057281" target="_main">Stranger Things</a></h3>
+            </div>
+            <!-- Series 4 -->
+            <div class="card">
+                <img src="/Netflix Clone/the witcher.jpg" height="250" width="400" alt="Series 4">
+                <h3><a href="https://www.netflix.com/in/title/80189685" target="_main">The Witcher</a></h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Sign In</h2>
+            <form id="login-form">
+                <!-- Email Input -->
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <!-- Password Input -->
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <!-- Login Button -->
+                <button type="submit">Sign In</button>
+                
+                <!-- Additional Options -->
+                <div class="login-options">
+                    <div>
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <a href="#" class="help-link">Need help?</a>
+                </div>
+                
+            </form>
+            
+            <!-- Footer Links -->
+            <div class="login-footer">
+                <p>New to Netflix? <a href="signup.html" target="_nil">Sign up now</a>.</p>
+                <p class="small-text">
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                    <a href="#">Learn more</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer style="background-color: #141414; color: #e5e5e5; text-align: center; padding: 20px; margin-top: 20px;">
+    <p>&copy; 2024 Netflix Decooy :) All lefts reserved. |Buri Nazar wale tera muh kala</p>
+</footer>
+
+
+</body>
+</html>
