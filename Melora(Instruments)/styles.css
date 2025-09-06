@@ -1,0 +1,208 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #294966;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  color: #fff;
+  background-color: #294966;
+  height: 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Nova Cut', cursive;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.nav-links a,
+.login-button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #ff6347;
+  font-weight: bold;
+}
+
+.hero-image-container {
+  background-image: url('michael-heise-OOpkdcrbUrk-unsplash\ 2\ -\ Copy.png');
+  background-size:  cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid #f0f0f0;
+  border-bottom: 3px solid #f0f0f0;;
+}
+
+.music-box {
+  background-color: #213554;
+  padding: 20px;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #ffd700, #ff8c00, #ffd700);
+  border-image-slice: 1;
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.content-wrapper {
+  color: #fff;
+}
+
+.season-text {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.main-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.sub-text {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.utility-section {
+  text-align: center;
+  margin: 50px 0;
+  padding: 0 5%;
+  color: #144fa8;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight:600 /* Replaced semi-bold with a valid font-weight value */
+  margin-bottom: 30px;
+  color: rgb(253, 252, 252); /* Changed to black for better contrast */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.utility-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+  grid-template-rows: repeat(2, 1fr); /* Creates 2 equal-height rows */
+  gap: 20px; /* Space between the grid items */
+}
+
+.utility-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #000000);
+  aspect-ratio: 1 / 1; 
+  color: #000;
+  font-family: 'montserrat', sans-serif;
+  font-weight: normal;
+}
+
+.utility-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; 
+}
+
+.utility-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  background: rgba(33, 53, 84, 0.8);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+/* Footer Section */
+/* Footer Section */
+.footer-container {
+    background-color: #0B111B;
+    color: #fff;
+    padding: 50px 5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between; /* This causes items to be spaced out */
+    gap: 30px;
+    padding-left: 5%; /* This is a guess to align with the rest of the page content */
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1; 
+    text-align: left; 
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column a,
+.footer-column p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #dad4d4;
+    margin: 30px 0;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #a8c1e3;
+}
