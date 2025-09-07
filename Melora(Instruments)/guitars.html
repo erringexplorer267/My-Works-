@@ -187,22 +187,18 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        <!-- This media query handles the mobile header layout -->
         @media (max-width: 480px) {
             .category-grid {
                 grid-template-columns: repeat(1, 1fr);
             }
             .header-top {
-                <!-- The header items now stack vertically -->
                 flex-direction: column;
                 height: auto;
-                <!-- The search container margin is removed to prevent overflow -->
             }
             .search-container {
                 margin: 10px 0;
             }
             .header-bottom {
-                <!-- The navigation links also stack vertically -->
                 flex-direction: column;
                 gap: 10px;
             }
@@ -263,10 +259,9 @@
             font-size: 0.8rem;
             color: #a8c1e3;
         }
-        <!-- This media query handles the mobile footer layout -->
+        /* Media query to make the footer responsive */
         @media (max-width: 768px) {
             .footer-grid {
-                <!-- The footer columns now stack vertically -->
                 flex-direction: column;
                 gap: 20px;
                 padding-left: 0;
