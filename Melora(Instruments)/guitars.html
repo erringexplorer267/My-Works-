@@ -21,7 +21,6 @@
             background-size: cover;
         }
         .header {
-            
             padding: 10px 5%;
             color: #fff;
         }
@@ -60,7 +59,6 @@
             background: none;
             border: none;
             cursor: pointer;
-            
         }
         .search-container img {
             width: 20px;
@@ -82,6 +80,7 @@
             gap: 20px;
             font-weight: 600;
             margin-top: 10px;
+            flex-wrap: wrap;
         }
         .header-bottom a {
             color: #fff;
@@ -128,7 +127,7 @@
         
         .categories-section {
             padding: 50px 5%;
-            background-color:white; 
+            background-color: white; 
         }
 
         .section-title {
@@ -188,18 +187,22 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        <!-- This media query handles the mobile header layout -->
         @media (max-width: 480px) {
             .category-grid {
                 grid-template-columns: repeat(1, 1fr);
             }
             .header-top {
+                <!-- The header items now stack vertically -->
                 flex-direction: column;
                 height: auto;
+                <!-- The search container margin is removed to prevent overflow -->
             }
             .search-container {
                 margin: 10px 0;
             }
             .header-bottom {
+                <!-- The navigation links also stack vertically -->
                 flex-direction: column;
                 gap: 10px;
             }
@@ -207,6 +210,7 @@
                 padding: 5px 10px;
             }
         }
+
         /* Footer Section */
         .footer-container {
             background-color: #0B111B;
@@ -259,6 +263,7 @@
             font-size: 0.8rem;
             color: #a8c1e3;
         }
+        <!-- This media query handles the mobile footer layout -->
         @media (max-width: 768px) {
             .footer-grid {
                 <!-- The footer columns now stack vertically -->
