@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melora - Guitars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color:linear-gradient(to bottom, #1E3A8A 0%, #ececec 100%);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .header {
+            background-color: #294966;
+            padding: 10px 5%;
+            color: #fff;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-family: 'Nova Cut', cursive;
+        }
+       .search-container {
+position: relative;
+ display: flex;
+align-items: right; 
+justify-content: right;
+border-left:850px solid transparent;
+ }
+.search-container input {
+ padding: 8px 30px 8px 15px;
+ border-radius: 20px;
+ border: none;
+ outline: none;
+ background-color: #fff;
+ color: #000;
+ width: 250px;
+ }
+ .search-container button {
+ position: absolute;
+ right: 5px;
+ top: 50%;
+transform: translateY(-50%);
+background: none;
+ border: none;
+ cursor: pointer;
+ }
+.login-button {
+background-color: #ff6347;
+color: #fff;
+text-decoration: none;
+font-family: 'montserrat', sans-serif;
+font-size: 0.9rem;
+padding: 8px 15px;
+border-radius: 5px; font-weight: bold;
+        }
+        .header-bottom {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .header-bottom a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        .header-bottom a.selected {
+            border: 2px solid #ffd700;
+            background-color: rgba(255, 215, 0, 0.2);
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        /* Hero Image Container */
+       .hero-image-container {
+            background: linear-gradient(to bottom, #294966 0%, #FDFDFD 100%);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 3px solid #f0f0f0;
+            border-bottom: 3px solid #f0f0f0;
+        }
+
+
+        /* Footer Section */
+        .footer-container {
+            background-color: #0B111B;
+            color: #fff;
+            padding: 50px 5%;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-left: 5%;
+        }
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+            text-align: left;
+        }
+        .footer-column h4 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .footer-column a,
+        .footer-column p {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        .footer-divider {
+            border: 0;
+            height: 1px;
+            background-color: #dad4d4;
+            margin: 30px 0;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #a8c1e3;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo"> <a style="color: #ececec ;text-decoration: none;" href="index.html">MELORA</a></div>
+             <div class="search-container">
+ <input type="text" placeholder="Search for products">
+ <button>
+ <img src="search.png" alt="Search icon">
+ </button>
+</div>
+            <a href="login.html" class="login-button">LOG IN</a>
+        </div>
+        <nav class="header-bottom">
+            <a href="#" class="selected">Guitars</a>
+            <a href="#">Classical</a>
+            <a href="#">Violin Family</a>
+            <a href="#">Digital Pianos</a>
+            <a href="#">Wind Type</a>
+            <a href="#">Drum Sets</a>
+            <a href="#">Percussions</a>
+            <a href="#">Amplifiers</a>
+            <a href="#">Accessories</a>
+        </nav>
+    </header>
+
+    <div class="hero-image-container"></div>
+
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>CUSTOMER SERVICE</h4>
+                <a href="#">Raise a ticket</a>
+                <a href="#">Returns / Cancellations</a>
+                <a href="#">Shipping / Delivery</a>
+            </div>
+            <div class="footer-column">
+                <h4>POLICIES</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Warranty</a>
+                <a href="#">Terms / Conditions</a>
+            </div>
+            <div class="footer-column">
+                <h4>CONTACT US</h4>
+                <a href="#">Track order</a>
+                <a href="#">Email-uom90000@gmail.com</a>
+                <a href="#">Phone-6290784267</a>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT US</h4>
+                <p>About Melora</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/psychopath_xd_/" target="_blank"><img src="Instagram-64 1.png" alt=""></a>
+                    <a href="#"><img src="twitter.png" alt=""></a>
+                    <a href="#"><img src="SocialMedia_Facebook-Outline-64 1.png" alt=""></a>
+                    <a href="https://www.youtube.com/@avenger4640" target="_blank"><img src="youtube.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="copyright">
+            © Copyright 2024, Melora | All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
