@@ -16,12 +16,12 @@
         }
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color:linear-gradient(to bottom, #1E3A8A 0%, #ececec 100%);
+            background-image: linear-gradient(to bottom, #294966 22%, #FDFDFD 100%);
             background-attachment: fixed;
             background-size: cover;
         }
         .header {
-            background-color: #294966;
+            
             padding: 10px 5%;
             color: #fff;
         }
@@ -36,39 +36,45 @@
             font-weight: 400;
             font-family: 'Nova Cut', cursive;
         }
-       .search-container {
-position: relative;
- display: flex;
-align-items: right; 
-justify-content: right;
-border-left:850px solid transparent;
- }
-.search-container input {
- padding: 8px 30px 8px 15px;
- border-radius: 20px;
- border: none;
- outline: none;
- background-color: #fff;
- color: #000;
- width: 250px;
- }
- .search-container button {
- position: absolute;
- right: 5px;
- top: 50%;
-transform: translateY(-50%);
-background: none;
- border: none;
- cursor: pointer;
- }
-.login-button {
-background-color: #ff6347;
-color: #fff;
-text-decoration: none;
-font-family: 'montserrat', sans-serif;
-font-size: 0.9rem;
-padding: 8px 15px;
-border-radius: 5px; font-weight: bold;
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 850px;
+        }
+        .search-container input {
+            padding: 8px 30px 8px 15px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            color: #000;
+            width: 250px;
+        }
+        .search-container button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            
+        }
+        .search-container img {
+            width: 20px;
+            height: 20px;
+        }
+        .login-button {
+            background-color: #ff6347;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'montserrat', sans-serif;
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            border-radius: 5px; 
+            font-weight: bold;
         }
         .header-bottom {
             display: flex;
@@ -92,21 +98,115 @@ border-radius: 5px; font-weight: bold;
         }
 
         /* Hero Image Container */
-       .hero-image-container {
+        .hero-image-container {
             background: linear-gradient(to bottom, #294966 0%, #FDFDFD 100%);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
-            max-width: 100%;
+            padding: 50px 0;
             display: flex;
             justify-content: center;
             align-items: center;
             border-top: 3px solid #f0f0f0;
             border-bottom: 3px solid #f0f0f0;
+            text-align: center;
+            flex-direction: column;
         }
 
+        .hero-image-container h2 {
+            font-family: 'Nova Cut', cursive;
+            color: #eeeded;
+            font-size: 2.5rem;
+            margin: 0;
+        }
 
+        .hero-image-container p {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        
+        .categories-section {
+            padding: 50px 5%;
+            background-color:white; 
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'montserrat', sans-serif;
+            color: #294966;
+            font-weight: bold;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-card:hover .overlay {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    
+        /* Responsive design for the category grid */
+        @media (max-width: 1024px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .category-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .header-top {
+                flex-direction: column;
+                height: auto;
+            }
+            .search-container {
+                margin: 10px 0;
+            }
+            .header-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .header-bottom a {
+                padding: 5px 10px;
+            }
+        }
         /* Footer Section */
         .footer-container {
             background-color: #0B111B;
@@ -143,9 +243,10 @@ border-radius: 5px; font-weight: bold;
         .footer-column a:hover {
             text-decoration: underline;
         }
-        .social-icons a {
+        .social-icons a img {
+            width: 24px;
+            height: 24px;
             margin-right: 15px;
-            font-size: 1.2rem;
         }
         .footer-divider {
             border: 0;
@@ -158,18 +259,29 @@ border-radius: 5px; font-weight: bold;
             font-size: 0.8rem;
             color: #a8c1e3;
         }
+        @media (max-width: 768px) {
+            .footer-grid {
+                <!-- The footer columns now stack vertically -->
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 0;
+            }
+            .footer-column {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-top">
             <div class="logo"> <a style="color: #ececec ;text-decoration: none;" href="index.html">MELORA</a></div>
-             <div class="search-container">
- <input type="text" placeholder="Search for products">
- <button>
- <img src="search.png" alt="Search icon">
- </button>
-</div>
+            <div class="search-container">
+                <input type="text" placeholder="Search for products">
+                <button>
+                    <img src="search.png" alt="Search icon">
+                </button>
+            </div>
             <a href="login.html" class="login-button">LOG IN</a>
         </div>
         <nav class="header-bottom">
@@ -185,7 +297,48 @@ border-radius: 5px; font-weight: bold;
         </nav>
     </header>
 
-    <div class="hero-image-container"></div>
+    <div class="hero-image-container">
+        <h2>YOUR PERFECT INSTRUMENT</h2>
+        <p>Explore our wide selection of guitars for every skill level.</p>
+    </div>
+
+    <section class="categories-section">
+        <h2 class="section-title">SHOP BY CATEGORY</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="https://thumbs.dreamstime.com/b/acoustic-guitar-rests-cozy-leather-sofa-indoors-detailed-image-shows-next-to-stack-old-books-369397555.jpg">
+                <div class="overlay">For Beginners</div>
+            </div>
+            <div class="category-card">
+                <img src="https://media.istockphoto.com/id/1397013109/photo/acoustic-guitar-against-blank-wooden-plank-panel-grunge-background-with-copy-space.jpg?s=612x612&w=0&k=20&c=4jI2DyT1VMg04jd3svCQFcI6ahVInA1DLtibCEwM8TY=" alt="Acoustic Guitars">
+                <div class="overlay">Acoustic Guitars</div>
+            </div>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3VpdGFyfGVufDB8fDB8fHww" alt="Electric Guitars">
+                <div class="overlay">Electric Guitars</div>
+            </div>
+            <div class="category-card">
+                <img src="https://png.pngtree.com/background/20230424/original/pngtree-bass-guitar-with-an-inlaid-wood-bridge-picture-image_2461476.jpg" alt="Bass Guitars">
+                <div class="overlay">Bass Guitars</div>
+            </div>
+            <div class="category-card">
+                <img src="https://images.pexels.com/photos/1201112/pexels-photo-1201112.jpeg?cs=srgb&dl=pexels-brett-sayles-1201112.jpg&fm=jpg" alt="Classical Guitars">
+                <div class="overlay">Classical Guitars</div>
+            </div>
+            <div class="category-card">
+                <img src="https://t4.ftcdn.net/jpg/03/28/27/55/360_F_328275585_Ar176l7ynI2XooPHSskSRq3fPdBgD7yD.jpg" alt="Ukuleles">
+                <div class="overlay">Ukuleles</div>
+            </div>
+            <div class="category-card">
+                <img src="https://articles.boss.info/wp-content/uploads/2023/11/Original-Signal-2.png" alt="Guitar Amplifiers">
+                <div class="overlay">Guitar Amps</div>
+            </div>
+            <div class="category-card">
+                <img src="https://thumbs.dreamstime.com/b/music-equipment-collection-electronic-like-guitar-pedals-effects-processors-displayed-studio-home-setting-under-398552760.jpg" alt="Guitar Pedals">
+                <div class="overlay">Guitar Pedals</div>
+            </div>
+        </div>
+    </section>
 
     <div class="footer-container">
         <div class="footer-grid">
@@ -211,10 +364,10 @@ border-radius: 5px; font-weight: bold;
                 <h4>ABOUT US</h4>
                 <p>About Melora</p>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/psychopath_xd_/" target="_blank"><img src="Instagram-64 1.png" alt=""></a>
-                    <a href="#"><img src="twitter.png" alt=""></a>
-                    <a href="#"><img src="SocialMedia_Facebook-Outline-64 1.png" alt=""></a>
-                    <a href="https://www.youtube.com/@avenger4640" target="_blank"><img src="youtube.png" alt=""></a>
+                    <a href="https://www.instagram.com/psychopath_xd_/" target="_blank"><img src="https://placehold.co/24x24/ffffff/000000?text=IG" alt="Instagram"></a>
+                    <a href="#"><img src="https://placehold.co/24x24/ffffff/000000?text=TW" alt="Twitter"></a>
+                    <a href="#"><img src="https://placehold.co/24x24/ffffff/000000?text=FB" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@avenger4640" target="_blank"><img src="https://placehold.co/24x24/ffffff/000000?text=YT" alt="YouTube"></a>
                 </div>
             </div>
         </div>
